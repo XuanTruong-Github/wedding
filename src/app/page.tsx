@@ -1,9 +1,14 @@
 import Header from "@/components/pages/home/header";
+import Slider from "@/components/pages/home/slider";
+import Music from "@/components/pages/home/music";
 export default function Home() {
   return (
-    <>
+    <div className="view-port">
       <Header />
-      <main></main>
-    </>
+      <main>
+        <Slider />
+        <Music />
+      </main>
+    </div>
   );
 }

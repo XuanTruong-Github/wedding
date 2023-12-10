@@ -11,7 +11,7 @@ export default function Logo({ className }: Props) {
     <Link
       href="/"
       className={cn(
-        "w-fit text-2xl lg:text-4xl flex items-center justify-center gap-1",
+        "w-fit text-2xl lg:text-4xl flex items-center justify-center gap-1 font-bold",
         font.className,
         className
       )}
@@ -33,7 +33,7 @@ export function LogoMini({ className }: Props) {
     <Link
       href="/"
       className={cn(
-        "w-fit text-xl flex items-center justify-center gap-1",
+        "w-fit text-xl flex items-center justify-center gap-1 font-bold",
         font.className,
         className
       )}

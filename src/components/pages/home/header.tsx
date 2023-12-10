@@ -1,6 +1,9 @@
 import Logo, { LogoMini } from "@/components/logo";
-import { Button } from "@/components/ui/button";
-import { Menu as MenuIcon } from "lucide-react";
+import Sidebar from "./sidebar";
+import { menu } from "@/configs/menu";
+import Link from "next/link";
+import { MenuType } from "@/types";
+
 export default function Header() {
   return (
     <header className="w-full sticky bg-white top-0 left-0 z-40">
@@ -13,12 +16,21 @@ export default function Header() {
         </div>
       </section>
       <hr />
-      <section className="flex items-center justify-between py-2 px-3">
+      <section className="flex items-center justify-between py-2 px-3 md:hidden">
         <LogoMini />
-        <Button variant="link" className=" p-0">
-          <MenuIcon size={28} />
-        </Button>
+        <Sidebar />
       </section>
+      <nav className="container items-center justify-center hidden md:flex">
+        {menu.map((item: MenuType) => (
+          <Link
+            key={item.id}
+            href={"#" + item.id}
+            className="p-3 text-sm font-bold hover:text-primary lg:text-base lg:p-4"
+          >
+            {item.text}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }
