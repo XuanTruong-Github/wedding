@@ -37,10 +37,10 @@ export default function Slider() {
               Xuân Trường
               <Image
                 src="/images/heart.gif"
-                width={50}
-                height={50}
+                width={64}
+                height={64}
                 alt="Heart"
-                className="w-9 lg:w-[50px] object-contain"
+                className="object-contain"
               />
               Tú Anh
             </h1>
