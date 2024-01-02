@@ -4,7 +4,7 @@ import Invitation from "@/components/pages/home/invitation";
 import Music from "@/components/pages/home/music";
 export default function Home() {
   return (
-    <div className="view-port">
+    <div className="min-h-full">
       <Header />
       <main>
         <Slider />

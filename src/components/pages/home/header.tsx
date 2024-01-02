@@ -6,7 +6,7 @@ import { MenuType } from "@/types";
 
 export default function Header() {
   return (
-    <header className="w-full sticky bg-white top-0 left-0 z-40">
+    <header className="w-full sticky bg-white top-0 left-0 z-40 shadow-xl">
       <section className="text-center py-4">
         <Logo className="mx-auto" />
         <div className="flex items-center justify-center mt-2 gap-2">

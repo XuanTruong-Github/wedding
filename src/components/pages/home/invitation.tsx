@@ -1,16 +1,20 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { DayPicker } from "react-day-picker";
-import { Great_Vibes } from "next/font/google";
+import { Great_Vibes, Poppins, Inter } from "next/font/google";
 import { vi } from "date-fns/locale";
 import { cn } from "@/lib/utils";
-
 import { Calendar } from "@/components/ui/calendar";
+import { Button } from "@/components/ui/button";
+import Icon from "@/components/ui/icon";
 
 const font = Great_Vibes({
   subsets: ["latin"],
   weight: "400",
+});
+const poppinsFont = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 function Countdown() {
@@ -77,7 +81,7 @@ export default function Invitation() {
           <div className="border-2 border-primary lg:border-4 text-center p-6 h-full lg:py-12">
             <h2
               className={cn(
-                "italic text-2xl sm:text-[28px] mb-4 lg:text-5xl lg:mb-6",
+                "italic text-3xl sm:text-[28px] mb-4 lg:text-5xl lg:mb-6",
                 font.className
               )}
             >
@@ -93,28 +97,23 @@ export default function Invitation() {
               Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của chúng tôi
               có thêm một niềm hạnh phúc!
             </p>
-            <Link href={"#donate"} className="btn btn-primary rounded">
-              Mừng cưới
-              <span className="mdi mdi-cash-multiple ml-1"></span>
-            </Link>
+
+            <Button
+              className="sm:px-6 sm:py-3 md:text-base md:py-5 rounded-none h-[unset]"
+              asChild
+            >
+              <Link href={"#donate"} className={poppinsFont.className}>
+                Mừng cưới
+              </Link>
+            </Button>
           </div>
           <div className="left-vec w-[150px] h-[281px] absolute -left-20 -top-20"></div>
         </div>
         <div className="p-6 w-full lg:p-10 max-w-[500px] mx-auto lg:ml-0 bg-white relative">
           <div className="border-2 lg:border-4 border-primary text-center">
-            {/* <DayPicker
-              mode="single"
-              locale={vi}
-              defaultMonth={defaultMonth}
-              fromYear={2024}
-              selected={date}
-              footer={<Countdown />}
-              disableNavigation
-            /> */}
             <Calendar
               mode="single"
               selected={date}
-              className="rounded-md border"
               footer={<Countdown />}
               locale={vi}
               defaultMonth={defaultMonth}

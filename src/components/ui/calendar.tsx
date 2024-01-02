@@ -37,10 +37,10 @@ function Calendar({
         head_cell:
           "text-muted-foreground rounded-md font-bold text-sm flex-1 py-2",
         row: "flex w-full mt-2",
-        cell: "aspect-square flex-1 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+        cell: "aspect-square grid place-items-center rounded-full flex-1 text-sm p-0 relative focus-within:relative focus-within:z-20",
         day: cn(
           buttonVariants({ variant: "ghost" }),
-          "w-full h-full p-0 font-normal aria-selected:opacity-100 sm:text-base"
+          "w-9 h-9 sm:w-10 sm:h-10 rounded-full p-0 font-normal aria-selected:opacity-100 sm:text-base"
         ),
         day_range_end: "day-range-end",
         day_selected:
