@@ -7,7 +7,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
-import { LogoMini } from "@/components/logo";
+import Logo from "@/components/logo";
 import { Menu as MenuIcon } from "lucide-react";
 import { menu as menuData } from "@/configs/menu";
 import type { MenuType } from "@/types/index";
@@ -15,13 +15,13 @@ export default function Sidebar() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="link" className=" p-0">
+        <Button variant="link" className="p-0">
           <MenuIcon size={28} />
         </Button>
       </SheetTrigger>
       <SheetContent className="bg-white p-0">
         <SheetHeader className="p-4">
-          <LogoMini />
+          <Logo />
         </SheetHeader>
         <nav className="font-bold">
           {menuData.map((item: MenuType) => (

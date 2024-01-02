@@ -11,7 +11,7 @@ export default function Logo({ className }: Props) {
     <Link
       href="/"
       className={cn(
-        "w-fit text-2xl lg:text-4xl flex items-center justify-center gap-1 font-bold",
+        "w-fit text-2xl lg:text-4xl flex items-center justify-center gap-1 font-bold text-[#fc4a4c]",
         font.className,
         className
       )}
@@ -25,28 +25,6 @@ export default function Logo({ className }: Props) {
         className="w-9 lg:w-[50px] object-contain"
       />
       Tú Anh
-    </Link>
-  );
-}
-export function LogoMini({ className }: Props) {
-  return (
-    <Link
-      href="/"
-      className={cn(
-        "w-fit text-xl flex items-center justify-center gap-1 font-bold",
-        font.className,
-        className
-      )}
-    >
-      XT
-      <Image
-        src="/images/heart.gif"
-        width={50}
-        height={50}
-        alt="Heart"
-        className="w-9 lg:w-[50px] object-contain"
-      />
-      TA
     </Link>
   );
 }

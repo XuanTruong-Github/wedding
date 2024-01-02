@@ -1,4 +1,4 @@
-import Logo, { LogoMini } from "@/components/logo";
+import Logo from "@/components/logo";
 import Sidebar from "./sidebar";
 import { menu } from "@/configs/menu";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import { MenuType } from "@/types";
 export default function Header() {
   return (
     <header className="w-full sticky bg-white top-0 left-0 z-40 shadow-xl">
-      <section className="text-center py-4">
+      <section className="text-center py-4 hidden md:block">
         <Logo className="mx-auto" />
         <div className="flex items-center justify-center mt-2 gap-2">
           <hr className="w-10" />
@@ -17,7 +17,7 @@ export default function Header() {
       </section>
       <hr />
       <section className="flex items-center justify-between py-2 px-3 md:hidden">
-        <LogoMini />
+        <Logo />
         <Sidebar />
       </section>
       <nav className="container items-center justify-center hidden md:flex">

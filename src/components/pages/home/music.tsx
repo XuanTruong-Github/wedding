@@ -1,5 +1,6 @@
 "use client";
-
+import { Volume2, VolumeX } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
 import { cn } from "@/lib/utils";
 export default function Music() {
@@ -15,6 +16,7 @@ export default function Music() {
       setPlay(false);
     }
   };
+
   return (
     <>
       <audio
@@ -23,17 +25,14 @@ export default function Music() {
         controls
         className="hidden"
       ></audio>
-      <button
-        className="fixed left-4 bottom-4 text-white bg-error rounded-full aspect-square px-3 border-4 border-red-200"
+      <Button
+        size="icon"
+        variant="destructive"
+        className="rounded-full fixed left-4 bottom-4"
         onClick={onToogle}
       >
-        <i
-          className={cn(
-            "text-xl mdi",
-            isPlaying ? "mdi-volume-high" : "mdi-volume-off"
-          )}
-        ></i>
-      </button>
+        {isPlaying ? <Volume2 size={20} /> : <VolumeX size={20} />}
+      </Button>
     </>
   );
 }
