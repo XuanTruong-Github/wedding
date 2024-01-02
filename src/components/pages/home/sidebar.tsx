@@ -10,10 +10,12 @@ import Link from "next/link";
 import Logo from "@/components/logo";
 import { Menu as MenuIcon } from "lucide-react";
 import { menu as menuData } from "@/configs/menu";
+import { useState } from "react";
 import type { MenuType } from "@/types/index";
 export default function Sidebar() {
+  const [collapsed, setCollapsed] = useState(false);
   return (
-    <Sheet>
+    <Sheet open={collapsed} onOpenChange={setCollapsed}>
       <SheetTrigger asChild>
         <Button variant="link" className="p-0">
           <MenuIcon size={28} />
@@ -29,6 +31,7 @@ export default function Sidebar() {
               key={item.id}
               href={item?.path || `#${item.id}`}
               className="inline-block w-full p-4"
+              onClick={() => setCollapsed(false)}
             >
               {item.text}
             </Link>

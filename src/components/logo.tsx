@@ -11,7 +11,7 @@ export default function Logo({ className }: Props) {
     <Link
       href="/"
       className={cn(
-        "w-fit text-2xl lg:text-4xl flex items-center justify-center gap-1 font-bold text-[#fc4a4c]",
+        "w-fit text-2xl lg:text-4xl flex items-center justify-center gap-1 font-bold",
         font.className,
         className
       )}
