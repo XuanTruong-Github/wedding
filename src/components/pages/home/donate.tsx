@@ -37,11 +37,11 @@ export default function Donate() {
       >
         Hộp mừng cưới
       </h2>
-      <div className="container md:flex md:items-center md:justify-center md:gap-4 lg:gap-10">
+      <div className="container grid grid-cols-1 gap-4">
         {banks.map((item, key) => (
           <article
             key={key}
-            className="p-6 bg-white rounded-lg border-2 md:border-4 border-primary text-center mx-auto w-96 my-6 md:m-0 shadow-lg"
+            className="p-6 bg-white rounded-lg border-2 md:border-4 border-primary text-center shadow-lg"
           >
             <h4 className="font-bold text-lg mb-4">{item.title}</h4>
             <Image
