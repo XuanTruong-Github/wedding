@@ -15,6 +15,6 @@ export const services = {
       .from("Album")
       .list("", params);
     if (error) return [];
-    return data.map((item) => BASE_URL + item.name);
+    return data.map((item) => BASE_URL + item.name).reverse();
   },
 };

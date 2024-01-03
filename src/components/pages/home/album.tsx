@@ -67,8 +67,8 @@ export default function Album({ images }: Props) {
             <Image
               src={currentImage}
               alt="Ảnh cưới"
-              height={1920}
-              width={1080}
+              width={1280}
+              height={800}
               className="object-contain rounded"
               priority
             />
