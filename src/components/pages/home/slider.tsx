@@ -1,24 +1,23 @@
 "use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import { Dancing_Script } from "next/font/google";
+import supabase from "@/lib/supabase";
 import { cn } from "@/lib/utils";
 import "swiper/css";
 import "swiper/css/effect-fade";
-import { useEffect } from "react";
-const font = Dancing_Script({ subsets: ["latin"], weight: ["600", "700"] });
 
-export default function Slider() {
-  const images = [
-    "https://cdn.biihappy.com/ziiweb/website/653539aaab8486d0cc04a4db/templates/6174ef83a62963738e0a367c/9b7f4b9615b1beab8455ae6fbe11e5a3.jpg",
-    "https://cdn.biihappy.com/ziiweb/website/653539aaab8486d0cc04a4db/templates/6174ef83a62963738e0a367c/0a76b48021190c934f2a1c4ebb1f30fb.jpg",
-  ];
+const font = Dancing_Script({ subsets: ["latin"], weight: ["600", "700"] });
+type Props = {
+  images: string[];
+};
+export default function Slider({ images }: Props) {
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch("/api/sliders");
-      const data = await response.json();
-      console.log(data);
+      const { data, error } = await supabase.storage.listBuckets();
+      console.log("DATA: ", data);
     };
     getData();
   }, []);
@@ -28,7 +27,7 @@ export default function Slider() {
         slidesPerView={1}
         modules={[Autoplay, EffectFade]}
         autoplay={{
-          delay: 5000,
+          delay: 10000,
           disableOnInteraction: false,
         }}
         effect={"fade"}
@@ -56,7 +55,7 @@ export default function Slider() {
             <p className="text-xs sm:text-sm">14 Tháng 1 Năm 2024</p>
           </div>
         </div>
-        {images.map((item, key) => (
+        {images?.map((item, key) => (
           <SwiperSlide key={key}>
             <div className="h-[500px] md:h-[600px] lg:h-[unset] lg:aspect-video relative">
               <Image

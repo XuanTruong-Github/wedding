@@ -8,12 +8,19 @@ import Album from "@/components/pages/home/album";
 import Donate from "@/components/pages/home/donate";
 import ThankYou from "@/components/pages/home/thankyou";
 import Music from "@/components/pages/home/music";
-export default function Home() {
+
+export default async function Home() {
+  const data = {
+    sliders: [
+      "https://osrokyoftlwfyhywgwui.supabase.co/storage/v1/object/public/Sliders/slider-1.jpg",
+      "https://osrokyoftlwfyhywgwui.supabase.co/storage/v1/object/public/Sliders/slider-2.jpg",
+    ],
+  };
   return (
     <div className="min-h-full">
       <Header />
       <main>
-        <Slider />
+        <Slider images={data.sliders} />
         <Invitation />
         <Couple />
         <Story />
