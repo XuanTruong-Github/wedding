@@ -6,6 +6,7 @@ import { Dancing_Script } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "swiper/css";
 import "swiper/css/effect-fade";
+import { useEffect } from "react";
 const font = Dancing_Script({ subsets: ["latin"], weight: ["600", "700"] });
 
 export default function Slider() {
@@ -13,6 +14,14 @@ export default function Slider() {
     "https://cdn.biihappy.com/ziiweb/website/653539aaab8486d0cc04a4db/templates/6174ef83a62963738e0a367c/9b7f4b9615b1beab8455ae6fbe11e5a3.jpg",
     "https://cdn.biihappy.com/ziiweb/website/653539aaab8486d0cc04a4db/templates/6174ef83a62963738e0a367c/0a76b48021190c934f2a1c4ebb1f30fb.jpg",
   ];
+  useEffect(() => {
+    const getData = async () => {
+      const response = await fetch("/api/sliders");
+      const data = await response.json();
+      console.log(data);
+    };
+    getData();
+  }, []);
   return (
     <section className="w-full h-fit">
       <Swiper
