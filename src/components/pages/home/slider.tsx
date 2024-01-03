@@ -16,8 +16,10 @@ type Props = {
 export default function Slider({ images }: Props) {
   useEffect(() => {
     const getData = async () => {
-      const { data, error } = await supabase.storage.listBuckets();
-      console.log("DATA: ", data);
+      const { data, error } = await supabase.storage.from("Sliders").list();
+      if (!error) {
+        console.log(data);
+      }
     };
     getData();
   }, []);

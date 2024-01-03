@@ -8,24 +8,20 @@ import Album from "@/components/pages/home/album";
 import Donate from "@/components/pages/home/donate";
 import ThankYou from "@/components/pages/home/thankyou";
 import Music from "@/components/pages/home/music";
-
+import { services } from "@/services";
 export default async function Home() {
-  const data = {
-    sliders: [
-      "https://osrokyoftlwfyhywgwui.supabase.co/storage/v1/object/public/Sliders/slider-1.jpg",
-      "https://osrokyoftlwfyhywgwui.supabase.co/storage/v1/object/public/Sliders/slider-2.jpg",
-    ],
-  };
+  const sliderImages = await services.getSliders();
+  const albumImages = await services.getAlbum({ limit: 20 });
   return (
     <div className="min-h-full">
       <Header />
       <main>
-        <Slider images={data.sliders} />
+        <Slider images={sliderImages} />
         <Invitation />
         <Couple />
         <Story />
         <Events />
-        <Album />
+        <Album images={albumImages} />
         <Donate />
         <ThankYou />
         <Music />

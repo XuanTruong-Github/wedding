@@ -6,7 +6,6 @@ import { vi } from "date-fns/locale";
 import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
-import Icon from "@/components/ui/icon";
 
 const font = Great_Vibes({
   subsets: ["latin"],

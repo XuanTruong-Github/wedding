@@ -14,13 +14,11 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 const font = Dancing_Script({ subsets: ["latin"], weight: ["600", "700"] });
-export default function Album() {
-  const imagesFake = [
-    "https://cdn.biihappy.com/ziiweb/website/653539aaab8486d0cc04a4db/galleries/653a6df922124fc204054dac/large.jpg",
-    "https://cdn.biihappy.com/ziiweb/website/653539aaab8486d0cc04a4db/galleries/653a6dd77fdc7bef190738ea/large.jpg",
-    "https://cdn.biihappy.com/ziiweb/website/653539aaab8486d0cc04a4db/galleries/65368760620218493a071d00/small.jpg",
-    "https://cdn.biihappy.com/ziiweb/website/653539aaab8486d0cc04a4db/galleries/65368765edd2c72d3f02b142/small.jpg",
-  ];
+
+type Props = {
+  images: string[];
+};
+export default function Album({ images }: Props) {
   const [currentImage, setCurrentImage] = useState<string | null>(null);
   return (
     <section id="gallery" className="container py-20 text-center">
@@ -47,7 +45,7 @@ export default function Album() {
         <Link href={"/album"}>Xem Album</Link>
       </Button>
       <div className="columns-2 gap-2 space-y-2 sm:columns-3 sm:gap-3 sm:space-y-3 lg:space-y-4 lg:gap-4">
-        {imagesFake.map((item, key) => (
+        {images.map((item, key) => (
           <div
             key={key}
             className="break-inside-avoid rounded overflow-hidden"
@@ -56,8 +54,8 @@ export default function Album() {
             <Image
               src={item}
               alt={"" + key}
-              height={1080}
-              width={1080}
+              height={640}
+              width={480}
               sizes="100vw"
             />
           </div>
@@ -65,16 +63,14 @@ export default function Album() {
       </div>
       <Dialog open={!!currentImage} onOpenChange={() => setCurrentImage(null)}>
         {!!currentImage && (
-          <DialogContent className="bg-white">
-            <DialogHeader>
-              <DialogTitle>Ảnh cưới của chúng tôi</DialogTitle>
-            </DialogHeader>
+          <DialogContent className="bg-white p-2">
             <Image
               src={currentImage}
               alt="Ảnh cưới"
+              height={1920}
               width={1080}
-              height={1080}
               className="object-contain rounded"
+              priority
             />
           </DialogContent>
         )}
