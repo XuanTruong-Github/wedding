@@ -37,7 +37,7 @@ export default function Donate() {
       >
         Hộp mừng cưới
       </h2>
-      <div className="container grid grid-cols-1 gap-4">
+      <div className="px-4 max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
         {banks.map((item, key) => (
           <article
             key={key}

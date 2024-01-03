@@ -1,11 +1,5 @@
 "use client";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -20,6 +14,7 @@ type Props = {
 };
 export default function Album({ images }: Props) {
   const [currentImage, setCurrentImage] = useState<string | null>(null);
+
   return (
     <section id="gallery" className="container py-20 text-center">
       <Image
@@ -48,14 +43,14 @@ export default function Album({ images }: Props) {
         {images.map((item, key) => (
           <div
             key={key}
-            className="break-inside-avoid rounded overflow-hidden"
+            className="break-inside-avoid rounded overflow-hidden cursor-pointer"
             onClick={() => setCurrentImage(item)}
           >
             <Image
               src={item}
               alt={"" + key}
-              height={640}
-              width={480}
+              height={600}
+              width={800}
               sizes="100vw"
             />
           </div>
@@ -63,14 +58,13 @@ export default function Album({ images }: Props) {
       </div>
       <Dialog open={!!currentImage} onOpenChange={() => setCurrentImage(null)}>
         {!!currentImage && (
-          <DialogContent className="bg-white p-2">
+          <DialogContent className="bg-white p-0">
             <Image
               src={currentImage}
               alt="Ảnh cưới"
-              width={1280}
-              height={800}
+              width={800}
+              height={600}
               className="object-contain rounded"
-              loading="lazy"
             />
           </DialogContent>
         )}
