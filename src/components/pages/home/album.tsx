@@ -1,5 +1,5 @@
 "use client";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -22,7 +22,7 @@ export default function Album({ images }: Props) {
         alt="Couple"
         width={126}
         height={59}
-        className="object-contain mx-auto mb-2"
+        className="object-contain mx-auto h-auto mb-2"
       />
 
       <h2
@@ -41,34 +41,30 @@ export default function Album({ images }: Props) {
       </Button>
       <div className="columns-2 gap-2 space-y-2 sm:columns-3 sm:gap-3 sm:space-y-3 lg:space-y-4 lg:gap-4">
         {images.map((item, key) => (
-          <div
-            key={key}
-            className="break-inside-avoid rounded overflow-hidden cursor-pointer"
-            onClick={() => setCurrentImage(item)}
-          >
-            <Image
-              src={item}
-              alt={"" + key}
-              height={600}
-              width={800}
-              sizes="100vw"
-            />
-          </div>
+          <Dialog key={key}>
+            <DialogTrigger>
+              <div className="break-inside-avoid rounded overflow-hidden cursor-pointer">
+                <Image
+                  src={item}
+                  alt={"" + key}
+                  height={600}
+                  width={800}
+                  sizes="100vw"
+                />
+              </div>
+            </DialogTrigger>
+            <DialogContent className="bg-white p-0 max-w-[90%] max-h-[90%]">
+              <Image
+                src={item}
+                alt="Ảnh cưới"
+                height={600}
+                width={800}
+                className="object-contain rounded"
+              />
+            </DialogContent>
+          </Dialog>
         ))}
       </div>
-      <Dialog open={!!currentImage} onOpenChange={() => setCurrentImage(null)}>
-        {!!currentImage && (
-          <DialogContent className="bg-white p-0">
-            <Image
-              src={currentImage}
-              alt="Ảnh cưới"
-              width={800}
-              height={600}
-              className="object-contain rounded"
-            />
-          </DialogContent>
-        )}
-      </Dialog>
     </section>
   );
 }
