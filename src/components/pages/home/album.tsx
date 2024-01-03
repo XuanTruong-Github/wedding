@@ -53,13 +53,13 @@ export default function Album({ images }: Props) {
                 />
               </div>
             </DialogTrigger>
-            <DialogContent className="bg-white p-0 max-w-[90%] max-h-[90%]">
+            <DialogContent className="bg-white p-0 w-[90%] sm:w-fit">
               <Image
                 src={item}
                 alt="Ảnh cưới"
                 height={600}
                 width={800}
-                className="object-contain rounded"
+                className="object-contain rounded h-auto"
               />
             </DialogContent>
           </Dialog>
