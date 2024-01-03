@@ -30,14 +30,14 @@ export default function Couple() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 mb-16 lg:mb-0 text-start">
         <div className="relative aspect-square">
-          <Image
+          {/* <Image
             src={
               "https://static7.opensubtitles.org/gfx/thumbs/6/0/2/6/10366206.jpg"
             }
             alt="Lê Xuân Trường"
             className="object-cover"
             fill
-          />
+          /> */}
         </div>
         <div className="bg-gray-50 py-10 px-8">
           <h2 className={cn("font-bold italic mb-3 text-2xl", font.className)}>
@@ -59,7 +59,7 @@ export default function Couple() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 text-start">
         <div className="aspect-square lg:order-last">
-          <Image
+          {/* <Image
             src={
               "https://static7.opensubtitles.org/gfx/thumbs/6/0/2/6/10366206.jpg"
             }
@@ -67,7 +67,7 @@ export default function Couple() {
             className="object-cover w-full h-full"
             width={1080}
             height={1080}
-          />
+          /> */}
         </div>
         <div className="bg-gray-50 py-10 px-8 lg:order-first">
           <h2 className={cn("font-bold italic mb-3 text-2xl", font.className)}>

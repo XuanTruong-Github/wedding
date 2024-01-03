@@ -112,7 +112,7 @@ export default function Story() {
                     index === 1 ? "sm:mr-10" : "sm:ml-10"
                   )}
                 >
-                  <Image src={item.image} alt={item.heading} fill />
+                  {/* <Image src={item.image} alt={item.heading} fill /> */}
                 </div>
               </li>
             ))}

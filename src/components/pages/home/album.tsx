@@ -70,7 +70,7 @@ export default function Album({ images }: Props) {
               width={1280}
               height={800}
               className="object-contain rounded"
-              priority
+              loading="lazy"
             />
           </DialogContent>
         )}

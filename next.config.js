@@ -2,12 +2,7 @@
 const nextConfig = {
   transpilePackages: ["lucide-react"],
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
+    domains: ["osrokyoftlwfyhywgwui.supabase.co"],
   },
 };
 

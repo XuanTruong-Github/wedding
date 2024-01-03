@@ -50,12 +50,12 @@ export default function Events() {
                 {event.title}
               </h3>
               <div className="relative aspect-square mb-4 overflow-hidden rounded">
-                <Image
+                {/* <Image
                   src={event.image}
                   alt={event.title}
                   className="object-cover"
                   fill
-                />
+                /> */}
               </div>
               <time className="font-bold mb-3 inline-block">{event.time}</time>
               <address className="mb-4 leading-6 not-italic">
