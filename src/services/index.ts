@@ -2,12 +2,18 @@ import supabase from "@/lib/supabase";
 
 export const services = {
   async getImages() {
-    const sliders =
+    const sliderNames =
       (await supabase.storage.from("wedding").list("sliders"))?.data?.map(
-        (item) =>
-          "https://osrokyoftlwfyhywgwui.supabase.co/storage/v1/object/public/wedding/sliders/" +
-          item.name
+        (item) => item.name
       ) || [];
+    const sliders = await Promise.all([
+      ...sliderNames.map(
+        (item) =>
+          supabase.storage.from("wedding").getPublicUrl(`sliders/${item}`).data
+            .publicUrl
+      ),
+    ]);
+
     const groom = await supabase.storage
       .from("wedding")
       .getPublicUrl("other/groom.jpg").data.publicUrl;
