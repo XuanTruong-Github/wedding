@@ -51,10 +51,8 @@ export default function Couple({ images }: Props) {
           </p>
           <p className="leading-8">
             Là một chàng trai đến từ Lạng Sơn, hiện đang sinh sống và làm việc
-            tại Hà Nội.
-            <br />
-            Là một người hiền lành thật thà, luôn coi trọng tình cảm và yêu
-            thương gia đình.
+            tại Hà Nội. Là một người hiền lành thật thà, luôn coi trọng tình cảm
+            và yêu thương gia đình.
           </p>
         </div>
       </div>
@@ -82,9 +80,7 @@ export default function Couple({ images }: Props) {
           </p>
           <p className="leading-8">
             Cô gái đến từ Tuyên Quang, hiện đang sinh sống và làm việc tại Hà
-            Nội.
-            <br />
-            Cô là một người vui vẻ, mạnh mẽ, sống chân thành và tình cảm.
+            Nội. Cô là một người vui vẻ, mạnh mẽ, sống chân thành và tình cảm.
           </p>
         </div>
       </div>
