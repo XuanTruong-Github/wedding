@@ -7,7 +7,6 @@ import Events from "@/components/pages/home/events";
 import Album from "@/components/pages/home/album";
 import Donate from "@/components/pages/home/donate";
 import ThankYou from "@/components/pages/home/thankyou";
-import HeartRain from "@/components/pages/home/heart-rain";
 import Music from "@/components/pages/home/music";
 import { services } from "@/services";
 export default async function Home() {
@@ -26,7 +25,6 @@ export default async function Home() {
         <Donate />
         <ThankYou image={data.thankYou} />
         <Music />
-        <HeartRain />
       </main>
     </div>
   );

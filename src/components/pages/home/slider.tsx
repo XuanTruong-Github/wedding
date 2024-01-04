@@ -15,7 +15,7 @@ type Props = {
   images: string[];
 };
 export default function Slider({ images }: Props) {
-  const plugin = useRef(Autoplay());
+  const plugin = useRef(Autoplay({ jump: true }));
   return (
     <section className="w-full h-fit relative bg-invitation">
       <div className="absolute top-0 left-0 h-full w-full z-[1] grid place-items-center bg-black/20">
