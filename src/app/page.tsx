@@ -5,6 +5,7 @@ import Couple from "@/components/pages/home/couple";
 import Story from "@/components/pages/home/story";
 import Events from "@/components/pages/home/events";
 import Album from "@/components/pages/home/album";
+import Video from "@/components/pages/home/video";
 import Donate from "@/components/pages/home/donate";
 import ThankYou from "@/components/pages/home/thankyou";
 import Music from "@/components/pages/home/music";
@@ -22,6 +23,7 @@ export default async function Home() {
         <Story stories={data.story} />
         <Events />
         <Album images={albumImages} />
+        <Video image={data.videoBackground} />
         <Donate />
         <ThankYou image={data.thankYou} />
         <Music />

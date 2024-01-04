@@ -31,6 +31,9 @@ export const services = {
     const story3 = await supabase.storage
       .from("wedding")
       .getPublicUrl("story/story-3.jpg").data.publicUrl;
+    const videoBackground = await supabase.storage
+      .from("wedding")
+      .getPublicUrl("other/video-background.jpg").data.publicUrl;
     return {
       sliders,
       couple: { groom, bride },
@@ -55,6 +58,7 @@ export const services = {
         },
       ],
       thankYou,
+      videoBackground,
     };
   },
   async getAlbum(params: any) {

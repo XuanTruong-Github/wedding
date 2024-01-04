@@ -33,12 +33,13 @@ export default function Couple({ images }: Props) {
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 mb-16 lg:mb-0 text-start">
-        <div className="relative aspect-square">
+        <div className="aspect-square">
           <Image
             src={images.groom}
             alt="Lê Xuân Trường"
-            className="object-cover"
-            fill
+            width={800}
+            height={800}
+            className="object-cover w-full h-full"
           />
         </div>
         <div className="bg-gray-50 py-10 px-8">
@@ -61,12 +62,13 @@ export default function Couple({ images }: Props) {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 text-start">
         <div className="aspect-square lg:order-last">
-          <div className="relative aspect-square">
+          <div className="aspect-square">
             <Image
               src={images.bride}
               alt="Bùi Tú Anh"
-              className="object-cover"
-              fill
+              width={800}
+              height={800}
+              className="object-cover w-full h-full"
             />
           </div>
         </div>
