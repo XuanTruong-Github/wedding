@@ -2,8 +2,11 @@ import Image from "next/image";
 import { Dancing_Script } from "next/font/google";
 import { cn } from "@/lib/utils";
 const font = Dancing_Script({ subsets: ["latin"], weight: ["600", "700"] });
-
-export default function Couple() {
+type Props = {
+  images: { bride: string; groom: string };
+};
+export default function Couple({ images }: Props) {
+  console.log("🚀 ~ file: couple.tsx:9 ~ Couple ~ images:", images);
   return (
     <section id="couple" className="py-20 container">
       <div className="text-center mx-auto md:w-3/4">
@@ -30,14 +33,12 @@ export default function Couple() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 mb-16 lg:mb-0 text-start">
         <div className="relative aspect-square">
-          {/* <Image
-            src={
-              "https://static7.opensubtitles.org/gfx/thumbs/6/0/2/6/10366206.jpg"
-            }
+          <Image
+            src={images.groom}
             alt="Lê Xuân Trường"
             className="object-cover"
             fill
-          /> */}
+          />
         </div>
         <div className="bg-gray-50 py-10 px-8">
           <h2 className={cn("font-bold italic mb-3 text-2xl", font.className)}>
@@ -59,15 +60,14 @@ export default function Couple() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 text-start">
         <div className="aspect-square lg:order-last">
-          {/* <Image
-            src={
-              "https://static7.opensubtitles.org/gfx/thumbs/6/0/2/6/10366206.jpg"
-            }
-            alt="Bùi Tú Anh"
-            className="object-cover w-full h-full"
-            width={1080}
-            height={1080}
-          /> */}
+          <div className="relative aspect-square">
+            <Image
+              src={images.bride}
+              alt="Bùi Tú Anh"
+              className="object-cover"
+              fill
+            />
+          </div>
         </div>
         <div className="bg-gray-50 py-10 px-8 lg:order-first">
           <h2 className={cn("font-bold italic mb-3 text-2xl", font.className)}>

@@ -12,13 +12,14 @@ import { services } from "@/services";
 export default async function Home() {
   const sliderImages = await services.getSliders();
   const albumImages = await services.getAlbum({ limit: 20 });
+  const coupleImages = await services.getCouple();
   return (
     <div className="min-h-full">
       <Header />
       <main>
         <Slider images={sliderImages} />
         <Invitation />
-        <Couple />
+        <Couple images={coupleImages} />
         <Story />
         <Events />
         <Album images={albumImages} />

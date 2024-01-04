@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Dancing_Script } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
 
 const font = Dancing_Script({ subsets: ["latin"], weight: ["600", "700"] });
 
@@ -13,8 +12,6 @@ type Props = {
   images: string[];
 };
 export default function Album({ images }: Props) {
-  const [currentImage, setCurrentImage] = useState<string | null>(null);
-
   return (
     <section id="gallery" className="container py-20 text-center">
       <Image
