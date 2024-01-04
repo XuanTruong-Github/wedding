@@ -6,7 +6,6 @@ type Props = {
   images: { bride: string; groom: string };
 };
 export default function Couple({ images }: Props) {
-  console.log("🚀 ~ file: couple.tsx:9 ~ Couple ~ images:", images);
   return (
     <section id="couple" className="py-20 container">
       <div className="text-center mx-auto md:w-3/4">

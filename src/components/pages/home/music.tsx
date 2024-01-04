@@ -2,7 +2,6 @@
 import { Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
-import { cn } from "@/lib/utils";
 export default function Music() {
   const [isPlaying, setPlay] = useState(false);
   const musicRef = useRef<HTMLAudioElement | null>(null);
@@ -27,8 +26,7 @@ export default function Music() {
       ></audio>
       <Button
         size="icon"
-        variant="destructive"
-        className="rounded-full fixed left-4 bottom-4"
+        className="rounded-full fixed left-4 bottom-[4%]"
         onClick={onToogle}
       >
         {isPlaying ? <Volume2 size={20} /> : <VolumeX size={20} />}

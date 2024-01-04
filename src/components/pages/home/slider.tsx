@@ -1,10 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import { Dancing_Script } from "next/font/google";
-import supabase from "@/lib/supabase";
 import { cn } from "@/lib/utils";
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -14,14 +12,6 @@ type Props = {
   images: string[];
 };
 export default function Slider({ images }: Props) {
-  useEffect(() => {
-    const getData = async () => {
-      const { data, error } = await supabase.storage.from("Sliders").list();
-      if (!error) {
-      }
-    };
-    getData();
-  }, []);
   return (
     <section className="w-full h-fit">
       <Swiper

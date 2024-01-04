@@ -10,21 +10,20 @@ import ThankYou from "@/components/pages/home/thankyou";
 import Music from "@/components/pages/home/music";
 import { services } from "@/services";
 export default async function Home() {
-  const sliderImages = await services.getSliders();
+  const images = await services.getImages();
   const albumImages = await services.getAlbum({ limit: 20 });
-  const coupleImages = await services.getCouple();
   return (
     <div className="min-h-full">
       <Header />
       <main>
-        <Slider images={sliderImages} />
+        <Slider images={images.sliders} />
         <Invitation />
-        <Couple images={coupleImages} />
+        <Couple images={images.couple} />
         <Story />
         <Events />
         <Album images={albumImages} />
         <Donate />
-        <ThankYou />
+        <ThankYou image={images.thankYou} />
         <Music />
       </main>
     </div>
