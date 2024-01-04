@@ -77,19 +77,20 @@ export default function Story({ stories }: Props) {
                     {item.heading}
                   </h3>
                   <time className="text-primary">{item.date}</time>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: item.content }}
-                    className="mt-6 text-sm leading-7 md:text-base md:leading-9"
-                  ></div>
+                  <p className="mt-6 text-sm leading-7 md:text-base md:leading-9">
+                    {item.content}
+                  </p>
                 </div>
-                <div
+                <Image
+                  src={item.image}
+                  alt={item.heading}
                   className={cn(
-                    "relative aspect-square",
-                    index === 1 ? "sm:mr-10" : "sm:ml-10"
+                    "h-auto object-contain",
+                    index === 1 ? "sm:pr-10" : "sm:pl-10"
                   )}
-                >
-                  {/* <Image src={item.image} alt={item.heading} fill /> */}
-                </div>
+                  width={600}
+                  height={800}
+                />
               </li>
             ))}
           </ul>

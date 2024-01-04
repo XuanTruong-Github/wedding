@@ -42,15 +42,15 @@ export default function Events() {
               <h3 className="uppercase font-bold text-lg mb-6 border-b-2 w-fit mx-auto border-primary pb-2 text-primary md:text-xl">
                 {event.title}
               </h3>
-              <div className="relative aspect-square mb-4 overflow-hidden rounded">
-                <Image
-                  src={event.image}
-                  alt={event.title}
-                  className="object-cover"
-                  sizes="100%"
-                  fill
-                />
-              </div>
+              <div className="relative  overflow-hidden rounded"></div>
+              <Image
+                src={event.image}
+                className="aspect-square mb-4"
+                width={600}
+                height={600}
+                alt={event.title}
+              />
+
               <time className="font-bold mb-3 inline-block">{event.time}</time>
               <address className="mb-4 leading-6 not-italic">
                 {event.address}

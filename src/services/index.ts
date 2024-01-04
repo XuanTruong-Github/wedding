@@ -17,42 +17,36 @@ export const services = {
     const thankYou = await supabase.storage
       .from("wedding")
       .getPublicUrl("other/thank-you.jpg").data.publicUrl;
-    const cauHon = await supabase.storage
+    const story1 = await supabase.storage
       .from("wedding")
-      .getPublicUrl("story/cau-hon.jpg").data.publicUrl;
+      .getPublicUrl("story/story-1.jpg").data.publicUrl;
+    const story2 = await supabase.storage
+      .from("wedding")
+      .getPublicUrl("story/story-2.jpg").data.publicUrl;
+    const story3 = await supabase.storage
+      .from("wedding")
+      .getPublicUrl("story/story-3.jpg").data.publicUrl;
     return {
       sliders,
       couple: { groom, bride },
       story: [
         {
-          heading: "Bạn có tin vào tình yêu online không?",
-          date: "October 03 2023",
-          content: `<p>Tôi đã từng không tin vào tình yêu online. Đã từng nghĩ làm sao
-          có thể thích một người chưa từng gặp mặt? Vậy mà giờ đây tôi lại
-          đang như vậy, bây giờ tôi đã hiểu: thế giới ảo tình yêu thật
-          đấy!!! Ngày ấy xung quanh tôi các chị em đều quen các bạn qua
-          mạng. Do vì không tin về tình yêu online nên tôi nghĩ khó có thể
-          quen ai qua mạng. Nhưng rồi thời gian cứ trôi, bạn bè dần dần có
-          gia đình hết. Và rồi tôi cũng thử làm quen trên mạng xem sao.
-          Sau vài cuộc tìm hiểu tôi đã gặp được anh bây giờ !!!</p>`,
-          image:
-            "https://cdn.biihappy.com/ziiweb/website/653539aaab8486d0cc04a4db/f8e3bb158e9f4c00c3e8528400f3ee03.jpeg",
+          heading: "Bạn có tin vào định mệnh không?",
+          date: "Tháng 9 năm 2020",
+          content: `Chúng tôi gặp nhau tại một quán nước. Lúc đó tôi đi là sinh viên, đi làm thêm tại một quán trà chanh và gặp cô ấy đi uống nước cùng bạn ở đó. Thật trùng hợp chúng tôi nhuộm tóc giống màu nhau. Thật ấn tượng. Trùng hợp tiếp theo là đồng nghiệp làm chung với tôi là bạn cô ấy, sau khi biết được Facebook, chúng tôi đã nhắn tin qua lại. Qua một thời gian nhắn tin, tôi rủ cô ấy đi chơi, cô ấy đồng ý.`,
+          image: story1,
         },
         {
-          heading: "Lời cầu hôn lãng mạn^^",
-          date: "June 28 2023",
-          content: `<p>Ngày ấy, sau 1 buổi tối đẹp trời tôi và anh đi dạo. Khi kết thúc buổi hẹn cả 2 đều rung động và xao xuyến. Chúng tôi ai về nhà nấy. Nhưng cả 2 đều có những cảm xúc yêu thương.  Anh đã nhắn tin với tôi bằng 1 giọng văn đầy ngượng ngùng và yêu thương. ''Mình y em nhé".<br>
-          Và cứ thế chúng tôi có những cái nắm tay đầu tiền, nụ hôn đầu tiên ...<br>
-          Dù 1 thời gian ngắn gặp và quen anh nhưng chúng tôi đều có cảm giác mình là của nhau &lt;3</p>`,
-          image: cauHon,
+          heading: "Lời tỏ tình dễ thương ^^",
+          date: "Ngày 03 tháng 10 năm 2023",
+          content: `Hôm ấy, sau 1 buổi tối đẹp trời tôi và em đi chơi. Khi kết thúc buổi hẹn cả 2 đều rung động và xao xuyến. Tôi đưa cô ấy về và tỏ tình đầy ngượng ngùng và yêu thương  ''Làm người yêu anh nhé". Dù 1 thời gian ngắn gặp và quen em nhưng tôi thật sự rát hạn phúc <3`,
+          image: story2,
         },
         {
-          heading: "Ngày lễ dạm ngõ",
-          date: "June 28 2023",
-          content: `<p>Và cuối cùng ngày đó cũng đến. Ngày 2 họ gặp nhau và chúng ta về chung 1 nhà. <br>
-          Cảm ơn anh đã đồng hành cùng em trên chặng đường tiếp theo. Chúng mình sẽ cùng bước. Có thể nhanh, có thể chậm miễn là có bước đi cùng nhau. </p>`,
-          image:
-            "https://cdn.biihappy.com/ziiweb/website/653539aaab8486d0cc04a4db/f8e3bb158e9f4c00c3e8528400f3ee03.jpeg",
+          heading: "Phút giây cầu hôn bất ngờ",
+          date: "Ngày 22 tháng 10 năm 2023",
+          content: `Chúng ta từ 2 con người xa lạ mà bước vào cuộc đời nhau . Và giờ đây chúng ta tiếp tục cùng nhau bước sang trang mới . Tôi rủ em đi ăn nhân dịp kỉ niệm 3 năm yêu nhau và 20/10, tôi lên kế hoạch tỏ tình bí mật. Liên hệ dến quán ăn, mang hoa cùng với nhẫn tỏ tình tôi đã chọn trước đó, ngỏ lời: “Làm vợ anh nhé “, em đã rất xúc động và đồng ý lời tỏ tình của tôi.`,
+          image: story3,
         },
       ],
       thankYou,

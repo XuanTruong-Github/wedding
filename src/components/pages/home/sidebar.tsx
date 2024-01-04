@@ -17,7 +17,7 @@ export default function Sidebar() {
   return (
     <Sheet open={collapsed} onOpenChange={setCollapsed}>
       <SheetTrigger asChild>
-        <Button variant="link" className="p-0">
+        <Button variant="link" className="p-0 px-2">
           <MenuIcon size={28} />
         </Button>
       </SheetTrigger>
