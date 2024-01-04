@@ -25,11 +25,10 @@ export default function Music() {
         className="hidden"
       ></audio>
       <Button
-        size="icon"
-        className="rounded-full fixed left-4 bottom-[4%]"
+        className="rounded-full fixed left-4 bottom-[4%] h-[46px] px-3"
         onClick={onToogle}
       >
-        {isPlaying ? <Volume2 size={20} /> : <VolumeX size={20} />}
+        {isPlaying ? <Volume2 size={22} /> : <VolumeX size={22} />}
       </Button>
     </>
   );

@@ -3,9 +3,9 @@ import supabase from "@/lib/supabase";
 export const services = {
   async getImages() {
     const sliderNames =
-      (await supabase.storage.from("wedding").list("sliders"))?.data?.map(
-        (item) => item.name
-      ) || [];
+      (
+        await supabase.storage.from("wedding").list("sliders", { limit: 4 })
+      )?.data?.map((item) => item.name) || [];
     const sliders = await Promise.all([
       ...sliderNames.map(
         (item) =>
@@ -13,7 +13,6 @@ export const services = {
             .publicUrl
       ),
     ]);
-
     const groom = await supabase.storage
       .from("wedding")
       .getPublicUrl("other/groom.jpg").data.publicUrl;

@@ -15,7 +15,7 @@ type Props = {
   images: string[];
 };
 export default function Slider({ images }: Props) {
-  const plugin = useRef(Autoplay({ jump: true }));
+  const plugin = useRef(Autoplay());
   return (
     <section className="w-full h-fit relative bg-invitation">
       <div className="absolute top-0 left-0 h-full w-full z-[1] grid place-items-center bg-black/20">
@@ -55,8 +55,9 @@ export default function Slider({ images }: Props) {
                 src={item}
                 alt="Ảnh cưới"
                 className="object-contain w-full h-auto"
-                width={1080}
-                height={1080}
+                width={800}
+                height={800}
+                priority
               />
             </CarouselItem>
           ))}
