@@ -47,13 +47,13 @@ export const services = {
         {
           heading: "Lời tỏ tình dễ thương ^^",
           date: "Ngày 03 tháng 10 năm 2023",
-          content: `Hôm ấy, sau 1 buổi tối đẹp trời tôi và em đi chơi. Khi kết thúc buổi hẹn cả 2 đều rung động và xao xuyến. Tôi đưa cô ấy về và tỏ tình đầy ngượng ngùng và yêu thương  ''Làm người yêu anh nhé". Dù 1 thời gian ngắn gặp và quen em nhưng tôi thật sự rát hạn phúc <3`,
+          content: `Hôm ấy, sau 1 buổi tối đẹp trời tôi và em đi chơi. Khi kết thúc buổi hẹn cả 2 đều rung động và xao xuyến. Tôi đưa cô ấy về và tỏ tình đầy ngượng ngùng và yêu thương  ''Làm người yêu anh nhé". Dù 1 thời gian ngắn gặp và quen em nhưng tôi thật sự rất hạnh phúc <3`,
           image: story2,
         },
         {
           heading: "Phút giây cầu hôn bất ngờ",
           date: "Ngày 22 tháng 10 năm 2023",
-          content: `Chúng ta từ 2 con người xa lạ mà bước vào cuộc đời nhau . Và giờ đây chúng ta tiếp tục cùng nhau bước sang trang mới . Tôi rủ em đi ăn nhân dịp kỉ niệm 3 năm yêu nhau và 20/10, tôi lên kế hoạch tỏ tình bí mật. Liên hệ dến quán ăn, mang hoa cùng với nhẫn tỏ tình tôi đã chọn trước đó, ngỏ lời: “Làm vợ anh nhé “, em đã rất xúc động và đồng ý lời tỏ tình của tôi.`,
+          content: `Chúng ta từ 2 con người xa lạ mà bước vào cuộc đời nhau . Và giờ đây chúng ta tiếp tục cùng nhau bước sang trang mới . Tôi rủ em đi ăn nhân dịp kỉ niệm 3 năm yêu nhau và 20/10, tôi lên kế hoạch tỏ tình bí mật. Liên hệ đến quán ăn, mang hoa cùng với nhẫn tỏ tình tôi đã chọn trước đó, ngỏ lời: “Làm vợ anh nhé “, em đã rất xúc động và đồng ý lời tỏ tình của tôi.`,
           image: story3,
         },
       ],

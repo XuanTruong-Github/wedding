@@ -50,13 +50,11 @@ export default function Couple({ images }: Props) {
             Con bà: <strong>Vương Thị Hương</strong>
           </p>
           <p className="leading-8">
-            Là 1 chàng trai đến từ Lạng Sơn, hiện đang sinh sống và làm việc tại
-            Hà Nội.
+            Là một chàng trai đến từ Lạng Sơn, hiện đang sinh sống và làm việc
+            tại Hà Nội.
             <br />
-            Là một người hiền lành thật thà. Luôn coi trọng tình cảm và yêu
-            thương gia đình. Với anh: “Gia đình là điểm tựa vững chắc nhất và là
-            bến đỗ bình yên không đâu sánh bằng đối với mỗi con người. Đó luôn
-            là nơi tràn ngập tình yêu thương để ta trở về.
+            Là một người hiền lành thật thà, luôn coi trọng tình cảm và yêu
+            thương gia đình.
           </p>
         </div>
       </div>
@@ -84,9 +82,9 @@ export default function Couple({ images }: Props) {
           </p>
           <p className="leading-8">
             Cô gái đến từ Tuyên Quang, hiện đang sinh sống và làm việc tại Hà
-            Nội. Sau khi tốt nghiệp Đại học. Cô đã quyết tâm ở lại Hà Nội và gắn
-            bó với ngành luật. Cô là một người vui vẻ, mạnh mẽ. Sống chân thành
-            và tình cảm.
+            Nội.
+            <br />
+            Cô là một người vui vẻ, mạnh mẽ, sống chân thành và tình cảm.
           </p>
         </div>
       </div>
