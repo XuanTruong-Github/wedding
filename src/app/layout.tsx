@@ -19,7 +19,12 @@ export const metadata: Metadata = {
       "Lê Xuân Trường & Bùi Tú Anh - Ngày cưới: 2024-01-14 | Yêu còn hơn mê. Đó là nhu cầu được cảm thấy toàn bộ, cảm thấy an toàn, được chữa lành, kết hợp với một ai đó, trái tim và linh hồn",
     type: "website",
     images: [
-      "https://osrokyoftlwfyhywgwui.supabase.co/storage/v1/object/public/wedding/other/thank-you.jpg",
+      {
+        url: "https://osrokyoftlwfyhywgwui.supabase.co/storage/v1/object/public/wedding/other/thank-you.jpg",
+        width: 800,
+        height: 800,
+        alt: "Xuân Trường & Tú Anh",
+      },
     ],
   },
   creator: "Xuân Trường",
