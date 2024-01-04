@@ -7,24 +7,26 @@ import Events from "@/components/pages/home/events";
 import Album from "@/components/pages/home/album";
 import Donate from "@/components/pages/home/donate";
 import ThankYou from "@/components/pages/home/thankyou";
+import HeartRain from "@/components/pages/home/heart-rain";
 import Music from "@/components/pages/home/music";
 import { services } from "@/services";
 export default async function Home() {
-  const images = await services.getImages();
+  const data = await services.getImages();
   const albumImages = await services.getAlbum({ limit: 20 });
   return (
     <div className="min-h-full">
       <Header />
       <main>
-        <Slider images={images.sliders} />
+        <Slider images={data.sliders} />
         <Invitation />
-        <Couple images={images.couple} />
-        <Story />
+        <Couple images={data.couple} />
+        <Story stories={data.story} />
         <Events />
         <Album images={albumImages} />
         <Donate />
-        <ThankYou image={images.thankYou} />
+        <ThankYou image={data.thankYou} />
         <Music />
+        <HeartRain />
       </main>
     </div>
   );

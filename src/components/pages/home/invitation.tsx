@@ -98,7 +98,7 @@ export default function Invitation() {
             </p>
 
             <Button
-              className="sm:px-6 sm:py-3 md:text-base md:py-5 rounded-none h-[unset]"
+              className="sm:px-6 sm:py-3 md:text-base rounded-none h-[unset]"
               asChild
             >
               <Link href={"#donate"} className={poppinsFont.className}>

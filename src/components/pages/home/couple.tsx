@@ -9,13 +9,15 @@ export default function Couple({ images }: Props) {
   return (
     <section id="couple" className="py-20 container">
       <div className="text-center mx-auto md:w-3/4">
-        <Image
-          src="/images/flower.png"
-          alt="Couple"
-          width="126"
-          height="59"
-          className="object-contain mx-auto mb-2"
-        />
+        <div className="h-auto w-32 mx-auto">
+          <Image
+            src={"/images/flower.png"}
+            alt="Couple"
+            width={128}
+            height={60}
+            className="mb-2 w-full object-contain"
+          />
+        </div>
 
         <h2
           className={cn(

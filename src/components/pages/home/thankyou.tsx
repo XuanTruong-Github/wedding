@@ -10,7 +10,7 @@ export default function ThankYou({ image }: Props) {
     <footer className="h-[700px] grid place-items-center">
       <section className="text-center">
         <div className="relative aspect-square w-56 mb-4 overflow-hidden rounded-full md:mb-8 lg:w-80 lg:mb-10">
-          <Image src={image} fill alt="Couple" sizes="100vw" />
+          <Image src={image} alt="Couple" width={600} height={600} />
         </div>
         <h2
           className={cn(

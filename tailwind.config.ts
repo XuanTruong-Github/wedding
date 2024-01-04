@@ -76,6 +76,7 @@ const config: Config = {
       },
       backgroundImage: {
         invitation: "url('/images/background.png')",
+        footer: "url('/images/footer-background.png')",
       },
     },
   },

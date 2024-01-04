@@ -7,28 +7,30 @@ export default function Donate() {
   const banks = [
     {
       title: "Mừng cưới đến chú rể",
-      qrcode: "/images/groom-qrcode.png",
+      qrcode: "/images/groom-code.png",
       bankName: "Ngân hàng Quân Đội - MBbank",
       accountName: "Lê Xuân Trường",
       accountNumber: "9704229208060184290",
     },
     {
       title: "Mừng cưới đến cô dâu",
-      qrcode: "/images/groom-qrcode.png",
+      qrcode: "/images/bride-code.jpg",
       bankName: "Ngân hàng Ngoại Thương - Vietcombank",
       accountName: "Bùi Tú Anh",
-      accountNumber: "5446465465",
+      accountNumber: "1038029981",
     },
   ];
   return (
     <section id="donate" className="bg-background py-20">
-      <Image
-        src={"/images/flower.png"}
-        alt="Couple"
-        width={126}
-        height={59}
-        className="object-contain aspect-square mx-auto"
-      />
+        <div className="h-auto w-32 mx-auto">
+        <Image
+          src={"/images/flower.png"}
+          alt="Couple"
+          width={128}
+          height={60}
+          className="mb-2 w-full object-contain"
+        />
+      </div>
       <h2
         className={cn(
           "text-center text-2xl font-bold italic mb-10 md:text-3xl lg:text-4xl",
