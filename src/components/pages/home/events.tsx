@@ -24,7 +24,7 @@ export default function Events() {
     },
   ];
   return (
-    <section className="bg-background">
+    <section id="events" className="bg-background">
       <div className="container text-center py-20">
         <h2 className={cn("text-4xl mb-3 md:text-5xl md:mb-4", font.className)}>
           Sự Kiện Cưới

@@ -13,7 +13,7 @@ type Props = {
 };
 export default function Story({ stories }: Props) {
   return (
-    <section className="py-24 bg-gray-50 lg:py-32">
+    <section id="story" className="py-24 bg-gray-50 lg:py-32">
       <div className="container">
         <div className="text-center mb-9 md:w-3/4 mx-auto lg:mb-12">
           <div className="h-auto w-32 mx-auto">
